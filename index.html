@@ -24,10 +24,19 @@
         
         <hr>
 
-        <h2>Cambiando un atributo de una etiqueta HTML</h2>
-        <button>Encender</button>
-        <img src="off.gif" alt="off">
-        <button>Apagar</button>
+        <!-- inicio ejercicio para cambiar el encendido de un bombillo con JavaScript -->
+        <h2>Cambiando los valores de un atributo de una etiqueta HTML</h2>
+        <button onclick=" document.getElementById('OnOff').src = 'img/on.gif' ">Encender</button>
+        <img src="img/off.gif" alt="off" id="OnOff">
+        <button onclick=" document.getElementById('OnOff').src = 'img/off.gif' ">Apagar</button>
+
+        <hr>
+
+        <!-- inicio ejercicio para cambiar el style de una etiqueta HTML -->
+        <h2>Cambiando el codigo CSS de una etiqueta HTML</h2>
+        <p id="estilo">Texto al cual cambiaremos su Style</p>
+        <button onclick=" document.getElementById('estilo').style.fontSize = '35px' "> Cambiar Estilo </button>
+        <button onclick=" document.getElementById('estilo').style.fontSize = '' "> Tamaño Original </button>
 
     </main>
 
