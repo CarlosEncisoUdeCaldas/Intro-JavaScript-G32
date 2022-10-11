@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>G32</title>
+    <link rel="stylesheet" href="">
+    <script>
+
+    </script>
 </head>
 <body>
     <!-- una pagina se divide en 3 partes -->
@@ -38,11 +42,37 @@
         <button onclick=" document.getElementById('estilo').style.fontSize = '35px' "> Cambiar Estilo </button>
         <button onclick=" document.getElementById('estilo').style.fontSize = '' "> Tamaño Original </button>
 
+        <hr>
+
+        <h2>Cambiando el valor del atributo display con JavaScript</h2>
+        <div id="ocultar-mostrar">
+            <p>Texto que va a ser ocultado</p>
+            <img src="img/NewYork.jpeg" alt="" width="300">
+            <p>Imagen de la ciudad de NY</p>
+        </div>
+        <br>
+        <button onclick=" document.getElementById('ocultar-mostrar').style.display = 'none'" >Ocultar</button>
+        <button onclick=" document.getElementById('ocultar-mostrar').style.display = 'block'" >Mostrar</button>
+
+        <hr>
+
+        <h2>Ejecutando codigo JavaScript OutLine por medio de la etiqueta Script</h2>
+        <p id="demo1"></p>
+
+
+
     </main>
 
     <!-- en el footer escribimos el pie de pagina con la informacion de contacto -->
     <footer>
 
     </footer>
+
+
+    <script>
+        document.getElementById('demo1').innerHTML = 'Texto insertado desde un script'
+
+        
+    </script>
 </body>
 </html>
