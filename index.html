@@ -23,24 +23,24 @@
         <!-- inicio de ejercicio para cambiar contenido de una etiqueta -->
         <h2>Cambiando el contenido de una etiqueta HTML</h2>
         <p id="demo">Texto que se va a cambiar con JavaScript</p>
-        <button onclick=" document.getElementById('demo').innerHTML = 'Texto cambiado con JS' "> Cambiar Texto </button>
-        <button onclick=" document.getElementById('demo').innerHTML = 'Texto que se va a cambiar con JavaScript' "> Texto Original </button>
+        <button onclick=" changeText('Texto cambiado con JS') "> Cambiar Texto </button>
+        <button onclick=" changeText('Texto que se va a cambiar con JavaScript') "> Texto Original </button>
         
         <hr>
 
         <!-- inicio ejercicio para cambiar el encendido de un bombillo con JavaScript -->
         <h2>Cambiando los valores de un atributo de una etiqueta HTML</h2>
-        <button onclick=" document.getElementById('OnOff').src = 'img/on.gif' ">Encender</button>
+        <button onclick=" OnOff('img/on.gif') ">Encender</button>
         <img src="img/off.gif" alt="off" id="OnOff">
-        <button onclick=" document.getElementById('OnOff').src = 'img/off.gif' ">Apagar</button>
+        <button onclick="OnOff('img/off.gif')">Apagar</button>
 
         <hr>
 
         <!-- inicio ejercicio para cambiar el style de una etiqueta HTML -->
         <h2>Cambiando el codigo CSS de una etiqueta HTML</h2>
         <p id="estilo">Texto al cual cambiaremos su Style</p>
-        <button onclick=" document.getElementById('estilo').style.fontSize = '35px' "> Cambiar Estilo </button>
-        <button onclick=" document.getElementById('estilo').style.fontSize = '' "> Tamaño Original </button>
+        <button onclick=" cambiarEstilo() "> Cambiar Estilo </button>
+        <button onclick=" volverEstilo() "> Tamaño Original </button>
 
         <hr>
 
@@ -51,8 +51,8 @@
             <p>Imagen de la ciudad de NY</p>
         </div>
         <br>
-        <button onclick=" document.getElementById('ocultar-mostrar').style.display = 'none'" >Ocultar</button>
-        <button onclick=" document.getElementById('ocultar-mostrar').style.display = 'block'" >Mostrar</button>
+        <button onclick=" ocultarImagen() " >Ocultar</button>
+        <button onclick=" mostrarImagen() " >Mostrar</button>
 
         <hr>
 
@@ -70,9 +70,60 @@
 
 
     <script>
-        document.getElementById('demo1').innerHTML = 'Texto insertado desde un script'
+        document.getElementById('demo1').innerHTML = 'Texto insertado desde un script';
 
-        
+        //funciones para cambiar el texto del id demo
+        // function cambiarTexto(){
+        //     document.getElementById('demo').innerHTML = 'Texto cambiado con JS';
+        // }
+
+        // function volverTexto(){
+        //     document.getElementById('demo').innerHTML = 'Texto que se va a cambiar con JavaScript';
+        // }
+
+        //funcion mejorada con un parametro
+            function changeText( texto ) {
+                console.log(texto);
+                document.getElementById('demo').innerHTML = texto;
+            }
+            
+            
+        //fin de las funciones para cambiar y/o volver al texto original del id demo
+
+        // funciones para apagar y encender un bombillo
+        // function prender() {
+        //     document.getElementById('OnOff').src = 'img/on.gif';
+        // }
+
+        // function apagar(){
+        //     document.getElementById('OnOff').src = 'img/off.gif';
+        // }
+        // fin de funciones OnOff
+
+        //funcion optimizada con parametros para el ejercicio de encender y apagar bombillo
+        function OnOff( texto ){
+            document.getElementById('OnOff').src = texto;
+        }
+
+        // funciones para cambiar el estilo de una etiqueta
+        function cambiarEstilo(){
+            document.getElementById('estilo').style.fontSize = '35px';
+        }
+
+        function volverEstilo(){
+            document.getElementById('estilo').style.fontSize = '';
+        }
+        // fin de las funciones para cambiar estilo de una etiqueta
+
+        //funciones para ocultar o mostrar elementos
+        function ocultarImagen(){
+            document.getElementById('ocultar-mostrar').style.display = 'none';
+        }
+
+        function mostrarImagen(){
+            document.getElementById('ocultar-mostrar').style.display = 'block';
+        }
+        // fin de las funciones para ocultar o mostrar elementos HTML
     </script>
 </body>
 </html>
