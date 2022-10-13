@@ -9,69 +9,18 @@
     
 </head>
 <body>
-    <!-- una pagina se divide en 3 partes -->
-    <!-- en el header se especifica el titulo y la barra de navegacion -->
-    <header>
-        <h2 style="text-align: center;">BIENVENIDO GRUPO 32 ESTO ES UNA INTRO A JAVASCRIPT</h2>
-    </header>
+   
+    <script>
+        // const control = false;
+        if( 5 < 2 ) {
+            console.log('control es true');
+        }else{
+            console.log('control es false');
+        }
 
-    <!-- en el main escribimos los elementos principales de nuesta pagina -->
-    <main>
-
-        <!-- inicio de ejercicio para cambiar contenido de una etiqueta -->
-        <h2>Cambiando el contenido de una etiqueta HTML</h2>
-        <p id="demo">Texto que se va a cambiar con JavaScript</p>
-        <button onclick=" changeText('Texto cambiado con JS') "> Cambiar Texto </button>
-        <button onclick=" changeText('Texto que se va a cambiar con JavaScript') "> Texto Original </button>
-        
-        <hr>
-
-        <!-- inicio ejercicio para cambiar el encendido de un bombillo con JavaScript -->
-        <h2>Cambiando los valores de un atributo de una etiqueta HTML</h2>
-        <button onclick=" OnOff('img/on.gif') ">Encender</button>
-        <img src="img/off.gif" alt="off" id="OnOff">
-        <button onclick="OnOff('img/off.gif')">Apagar</button>
-
-        <hr>
-
-        <!-- inicio ejercicio para cambiar el style de una etiqueta HTML -->
-        <h2>Cambiando el codigo CSS de una etiqueta HTML</h2>
-        <p id="estilo">Texto al cual cambiaremos su Style</p>
-        <button onclick=" cambiarEstilo() "> Cambiar Estilo </button>
-        <button onclick=" volverEstilo() "> Tamaño Original </button>
-
-        <hr>
-
-        <h2>Cambiando el valor del atributo display con JavaScript</h2>
-        <div id="ocultar-mostrar">
-            <p>Texto que va a ser ocultado</p>
-            <img src="img/NewYork.jpeg" alt="" width="300">
-            <p>Imagen de la ciudad de NY</p>
-        </div>
-        <br>
-        <button onclick=" ocultarImagen() " >Ocultar</button>
-        <button onclick=" mostrarImagen() " >Mostrar</button>
-
-        <hr>
-
-        <h2>Ejecutando codigo JavaScript OutLine por medio de la etiqueta Script</h2>
-        <p id="demo1"></p>
-        <br>
-        <button onclick="insertText()">Inner HTML</button>
-        <button onclick="document.write('Hola, este es documento.write')">Document Write</button>
-        <button onclick="window.alert('Esto es una Alerta')">Boton Alerta</button>
-        <button onclick="console.log('Este es un mensaje desde consola')">Console Log</button>
-        <button onclick="console.warn('Esto es un warning')">Console Warn</button>
-        <button onclick="window.print()">Print Document</button>
-
-    </main>
-
-    <!-- en el footer escribimos el pie de pagina con la informacion de contacto -->
-    <footer>
-
-    </footer>
-
-
-    <script src="js/script.js"></script>
+        //operador ternario; es la misma operacion del condicional anterior
+        const result = ( 5 < 2 ) ? 'control es true' : 'control es false';
+        console.log(result);
+</script>
 </body>
 </html>
