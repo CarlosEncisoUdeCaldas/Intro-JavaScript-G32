@@ -1,4 +1,6 @@
-document.getElementById("demo1").innerHTML = "Texto insertado desde un script";
+function insertText(){
+    document.getElementById("demo1").innerHTML = "Texto insertado desde un script";
+}
 
 //funciones para cambiar el texto del id demo
 // function cambiarTexto(){
@@ -53,9 +55,9 @@ function mostrarImagen() {
 //la misma funcion mostrarImagen pero tipo flecha
 // mostrarImagen = () => document.getElementById("ocultar-mostrar").style.display = "block"; 
 
-function saludo () {
-    console.log("hola mundo")
-};
-saludo();
+// function saludo () {
+//     console.log("hola mundo")
+// };
+// saludo();
 
 // fin de las funciones para ocultar o mostrar elementos HTML
