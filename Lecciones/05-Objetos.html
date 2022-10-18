@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>G32</title>
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+
+    <p id="demo" style="font-size: 30px;"></p>
+
+
+    <script>
+      const person = {
+        nombre: 'Charles',
+        apellido: 'Xavier',
+        id: 123,
+        direccion: {
+            lat: 5.333223,
+            long: 21.2222
+        },
+        mensajeSaludo: () => {
+          return 'Hola Grupo 32';
+        }
+      }
+      //vamos entonces a crear un propiedad que tenga dentro de ella una funcion anonima
+      console.log(person);
+
+      console.log( person.mensajeSaludo() );
+
+      //de esta manera accedemos a los objetos que se encuentran dentro de un objeto
+      // console.log(person.direccion['lat']);
+      // console.log(person.direccion.long);
+      // console.log(`Este es el objeto llamado person ${ JSON.stringify( person ) }`)
+
+      // document.getElementById('demo').innerHTML = `${person.nombre} ${person.apellido}` ; //insertando elementos por medio de template string
+      
+
+      // que se puede hacer con los objetos
+      // const persona = {
+      //   nombre: 'Pepe',
+      //   apellido: 'El Grillo'
+      // }
+      // console.log(persona);
+      // //con los objetos puedo cambiar el valor de las propiedades
+      // persona.nombre = 'Pepito'
+      // persona.apellido = 'El grillito'
+      // console.log(persona);
+
+      // //puedo agregar una nueva propiedad si no esta declarada dentro del objeto
+      // persona.telefono = 123456;
+      // console.log(persona);
+
+      // persona['telefono'] = 123; //esto es valido, es otra manera de acceder a las propiedades
+      // console.log(persona);
+      
+      // console.log(`Su nombre completo es ` + persona.nombre + ' ' + persona.apellido); //esto se conoce con el nombre de template string
+      // console.log(`¡Su nombre completo es ${persona.nombre} ${persona.apellido}!`); //esto se conoce con el nombre de template string
+      
+      //esto no se puede hacer, reasignar valores a un objeto
+        // const persona = {
+        //   nombre: 'Pepe',
+        //   apellido: 'El Grillo'
+        // }
+        // persona = { nombre: 'pepeelgrillo@gmail.com', apellido: 123456789 } ; //esto es un error para JavaScript
+
+
+    </script>
+  </body>
+</html>
