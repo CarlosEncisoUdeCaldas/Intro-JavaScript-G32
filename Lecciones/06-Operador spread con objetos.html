@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>G32</title>
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    
+
+    <script>
+      //operador spread
+      //en JavaScript cuando copiamos un objeto, no estamos haciendo una clonacion del mismo
+      // sino que estamos copiando la referencia en memoria del objeto
+      const car01 = {
+        marca: 'Fantasmin',
+        model: 'Chipichipi',
+        color: 'Rojo'
+      }
+
+      // const car02 = car01 ; //si usamos esta asignacion directa, se copia la referencia en memoria del objeto car01 hacia el objeto car02
+      // usando el operador spread
+      const car02 = {...car01} ; //para evitar tener la misma referencia de memoria para ambos objetos se usa el operador spread
+      console.log(car01);
+      console.log(car02);
+
+      car01.color = 'Negro'
+      console.log(car01);
+      car02.model = 'F500'
+      console.log(car02);
+
+    </script>
+  </body>
+</html>
