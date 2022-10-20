@@ -11,6 +11,20 @@
     
 
     <script>
+     const user = {
+      nombre: 'Pedro',
+      apellido: 'Picapiedra',
+      edad: 30
+     }
+     console.log(user);
+
+     //al utilizar el metodo global JSON.stringify convertimos un  objeto en formato string
+     const cadenaTipoJson = JSON.stringify( user );
+     console.log( cadenaTipoJson );
+
+     //cuando llega al back lo recibe en formato cadena y lo tiene que regresar a formato object
+     const variableTipoObjeto = JSON.parse( cadenaTipoJson )
+     console.log(variableTipoObjeto);
      
     </script>
   </body>
